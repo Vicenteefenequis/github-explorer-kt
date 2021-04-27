@@ -21,4 +21,7 @@ class GithubUserModel {
     @SerializedName("followers")
     var followers = ""
 
+    @SerializedName("following")
+    var following = ""
+
 }

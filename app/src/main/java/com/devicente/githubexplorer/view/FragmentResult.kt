@@ -82,7 +82,10 @@ class FragmentResult : Fragment() {
                                             GithubExplorerConstants.BUNDLE.GITHUBREPOSITORY,
                                             item.name
                                         )
-                                        setupNavigationFragment(FragmentInformationRepository(),bundle)
+                                        setupNavigationFragment(
+                                            FragmentInformationRepository(),
+                                            bundle
+                                        )
 
 
                                     }
@@ -110,7 +113,33 @@ class FragmentResult : Fragment() {
                                             GithubExplorerConstants.BUNDLE.GITHUB_NAME_USER,
                                             item.login
                                         );
-                                        setupNavigationFragment(FragmentSearch(),bundle)
+                                        setupNavigationFragment(FragmentSearch(), bundle)
+                                    }
+                            }
+                        }
+                    ) {}.apply {
+                    mViewModel.listFollowers.observe(viewLifecycleOwner) { followers ->
+                        submitList(followers)
+                        binding.loadingBar.visibility = View.GONE
+                    }
+                }
+            }
+            GithubExplorerConstants.FILTER.FOLLOWING -> {
+                binding.recyclerAllTasks.adapter = object :
+                    GithubListGenericAdapter<GithubFollowers>(
+                        R.layout.row_github_list,
+                        bind = { item, holder, _ ->
+                            with(holder.itemView) {
+                                this.findViewById<TextView>(R.id.text_name_repository).text =
+                                    item.login
+                                this.findViewById<CardView>(R.id.card_item_github)
+                                    .setOnClickListener {
+                                        val bundle = Bundle()
+                                        bundle.putString(
+                                            GithubExplorerConstants.BUNDLE.GITHUB_NAME_USER,
+                                            item.login
+                                        );
+                                        setupNavigationFragment(FragmentSearch(), bundle)
                                     }
                             }
                         }

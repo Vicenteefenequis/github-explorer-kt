@@ -60,6 +60,9 @@ class GithubViewModel(application: Application) : AndroidViewModel(application) 
             GithubExplorerConstants.FILTER.FOLLOWERS -> {
                 mGithubRepository.loadFollowers(name, listenerFollowers)
             }
+            GithubExplorerConstants.FILTER.FOLLOWING -> {
+                mGithubRepository.loadFollowing(name, listenerFollowers)
+            }
         }
     }
 }

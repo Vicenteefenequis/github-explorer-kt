@@ -19,6 +19,7 @@ class GithubExplorerConstants {
         const val REPOS = 0
         const val GISTS = 1
         const val FOLLOWERS = 2
+        const val FOLLOWING = 3
     }
 
 

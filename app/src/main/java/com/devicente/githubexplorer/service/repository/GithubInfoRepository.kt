@@ -77,6 +77,11 @@ class GithubInfoRepository(val context: Context) {
         list(call, listener)
     }
 
+    fun loadFollowing(name: String, listener: APIListener<List<GithubFollowers>>){
+        val call: Call<List<GithubFollowers>> = mRemote.loadFollowing(name)
+        list(call, listener)
+    }
+
     fun loadInformationRepos(
         name: String,
         repository: String,

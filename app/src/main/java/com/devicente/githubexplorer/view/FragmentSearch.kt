@@ -68,6 +68,13 @@ class FragmentSearch : Fragment() {
             )
         }
 
+        binding.buttonFollowing.setOnClickListener {
+            communicator.passDataCom(
+                binding.textUserName.text.toString(),
+                GithubExplorerConstants.FILTER.FOLLOWING
+            )
+        }
+
         return binding.root
     }
 
@@ -85,6 +92,7 @@ class FragmentSearch : Fragment() {
             Picasso.with(context).load(it.avatar_url).into(image_user)
             text_user_name.text = it.login
             followers.text = it.followers
+            text_following.text = it.following
             public_repos.text = it.public_repos
             wrapper_horizontal_information.visibility = View.VISIBLE;
             wrapper_profile_info.visibility = View.VISIBLE;
