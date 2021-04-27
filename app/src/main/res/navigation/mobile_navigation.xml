@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragmentSearch">
+    <fragment
+        android:id="@+id/fragmentSearch"
+        android:name="com.devicente.githubexplorer.view.FragmentSearch"
+        android:label="FragmentSearch" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.devicente.githubexplorer.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+</navigation>

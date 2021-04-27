@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
+
+
+    <style name="AppTheme.TransparentTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+    <style name="TextError">
+        <item name="android:textColor">@color/error200</item>
+        <item name="android:fontFamily">@font/ubuntu_light</item>
+    </style>
+
+    <style name="TextGithubExplorer">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/ubuntu_light</item>
+    </style>
+
+    <style name="DefaultEditText">
+        <item name="android:background">@drawable/shape_edit_text</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="ProgressBarWhite">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="DefaultButtonSend">
+        <item name="android:background">@drawable/shape_button_send</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>
