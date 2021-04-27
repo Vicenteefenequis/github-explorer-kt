@@ -15,9 +15,9 @@ Este maravilindo projeto foi desenvolvido com as seguintes tecnologias:
 
 ## :muscle: Projeto
 
-<span align="center"><img src="Assets/Screen Shot 2021-04-26 at 23.17.26.png"/></span>
-<span align="center"><img src="Assets/Screen Shot 2021-04-26 at 23.18.15.png"/></span>
-<span align="center"><img src="Assets/Screen Shot 2021-04-26 at 23.18.28.png"/></span>
+<span align="center"><img src="Assets/SearchUser.png"/></span>
+<span align="center"><img src="Assets/RepositoryDetails.png"/></span>
+<span align="center"><img src="Assets/SearchResult.png"/></span>
 
 
 ### :recycle: Como contribuir
