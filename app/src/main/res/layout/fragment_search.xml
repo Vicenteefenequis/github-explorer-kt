@@ -150,7 +150,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/button_public_repos"
-                        android:layout_width="120dp"
+                        android:layout_width="150dp"
                         android:layout_height="120dp"
                         android:layout_margin="12dp"
                         android:backgroundTint="@color/colorCardMain"
@@ -159,29 +159,48 @@
                         android:foreground="?attr/selectableItemBackground"
                         app:cardCornerRadius="12dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="25dp"
-                            android:text="PUBLIC REPOS"
-                            android:textColor="@color/white"
-                            android:textStyle="bold" />
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_public" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="5dp"
+                                android:text="PUBLIC REPOS"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
 
                         <TextView
                             android:id="@+id/public_repos"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginTop="25dp"
+                            android:layout_marginTop="10dp"
                             android:text="0"
                             android:textColor="@color/white" />
+
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/button_following"
-                        android:layout_width="120dp"
+                        android:layout_width="150dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
                         android:layout_margin="12dp"
@@ -191,21 +210,38 @@
                         android:foreground="?attr/selectableItemBackground"
                         app:cardCornerRadius="12dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="25dp"
-                            android:text="FOLLOWING"
-                            android:textColor="@color/white"
-                            android:textStyle="bold" />
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_favorite" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="5dp"
+                                android:text="FOLLOWING"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/text_following"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginTop="25dp"
+                            android:layout_marginTop="10dp"
                             android:text="0"
                             android:textColor="@color/white" />
 
@@ -214,7 +250,7 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/button_followers"
-                        android:layout_width="120dp"
+                        android:layout_width="150dp"
                         android:layout_height="120dp"
                         android:layout_gravity="center"
                         android:layout_margin="12dp"
@@ -224,21 +260,38 @@
                         android:foreground="?attr/selectableItemBackground"
                         app:cardCornerRadius="12dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="25dp"
-                            android:text="FOLLOWERS"
-                            android:textColor="@color/white"
-                            android:textStyle="bold" />
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_start" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="5dp"
+                                android:text="FOLLOWERS"
+                                android:textColor="@color/white"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
 
                         <TextView
                             android:id="@+id/followers"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginTop="25dp"
+                            android:layout_marginTop="10dp"
                             android:text="0"
                             android:textColor="@color/white" />
 
