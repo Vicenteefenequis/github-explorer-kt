@@ -12,7 +12,7 @@ import com.devicente.githubexplorer.service.constants.GithubExplorerConstants
 import com.devicente.githubexplorer.viewmodel.InformationRepositoryViewModel
 import kotlinx.android.synthetic.main.fragment_information_repository.*
 
-class FragmentInformationRepository : Fragment() {
+class InformationRepositoryFragment : Fragment() {
     private val mViewModel: InformationRepositoryViewModel by viewModels();
     private var mNameUser = "";
     private var mRepoName = "";

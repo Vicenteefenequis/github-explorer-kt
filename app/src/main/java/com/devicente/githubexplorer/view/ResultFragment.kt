@@ -1,20 +1,14 @@
 package com.devicente.githubexplorer.view
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
-import androidx.core.os.bundleOf
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.devicente.githubexplorer.R
 import com.devicente.githubexplorer.data.GithubFollowers
 import com.devicente.githubexplorer.data.GithubRepository
@@ -25,7 +19,7 @@ import com.devicente.githubexplorer.viewmodel.GithubViewModel
 import java.lang.IllegalArgumentException
 
 
-class FragmentResult : Fragment() {
+class ResultFragment : Fragment() {
 
     private val mViewModel: GithubViewModel by viewModels();
     private lateinit var binding: FragmentResultBinding;
@@ -83,7 +77,7 @@ class FragmentResult : Fragment() {
                                             item.name
                                         )
                                         setupNavigationFragment(
-                                            FragmentInformationRepository(),
+                                            InformationRepositoryFragment(),
                                             bundle
                                         )
 
@@ -113,7 +107,7 @@ class FragmentResult : Fragment() {
                                             GithubExplorerConstants.BUNDLE.GITHUB_NAME_USER,
                                             item.login
                                         );
-                                        setupNavigationFragment(FragmentSearch(), bundle)
+                                        setupNavigationFragment(SearchFragment(), bundle)
                                     }
                             }
                         }
@@ -139,7 +133,7 @@ class FragmentResult : Fragment() {
                                             GithubExplorerConstants.BUNDLE.GITHUB_NAME_USER,
                                             item.login
                                         );
-                                        setupNavigationFragment(FragmentSearch(), bundle)
+                                        setupNavigationFragment(SearchFragment(), bundle)
                                     }
                             }
                         }

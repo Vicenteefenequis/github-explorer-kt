@@ -19,7 +19,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_search.*
 
 
-class FragmentSearch : Fragment() {
+class SearchFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private lateinit var communicator: Communicator
     private lateinit var mViewModel: MainViewModel;

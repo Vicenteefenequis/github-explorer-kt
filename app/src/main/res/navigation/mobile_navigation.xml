@@ -6,7 +6,7 @@
     app:startDestination="@id/fragmentSearch">
     <fragment
         android:id="@+id/fragmentSearch"
-        android:name="com.devicente.githubexplorer.view.FragmentSearch"
+        android:name="com.devicente.githubexplorer.view.SearchFragment"
         android:label="FragmentSearch" />
     <fragment
         android:id="@+id/resultFragment"
