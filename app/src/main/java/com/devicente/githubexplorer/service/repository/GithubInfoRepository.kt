@@ -1,12 +1,11 @@
 package com.devicente.githubexplorer.service.repository
 
 import android.content.Context
-import android.util.Log
 import com.devicente.githubexplorer.data.GithubFollowers
 import com.devicente.githubexplorer.data.GithubRepository
 import com.devicente.githubexplorer.service.constants.GithubExplorerConstants
 import com.devicente.githubexplorer.service.listeners.APIListener
-import com.devicente.githubexplorer.service.model.GithubRepositoryInformation
+import com.devicente.githubexplorer.service.model.GithubRepoInfoModel
 import com.devicente.githubexplorer.service.model.GithubUserModel
 import com.devicente.githubexplorer.service.repository.remote.GithubInfoService
 import com.devicente.githubexplorer.service.repository.remote.RetrofitClient
@@ -85,15 +84,15 @@ class GithubInfoRepository(val context: Context) {
     fun loadInformationRepos(
         name: String,
         repository: String,
-        listener: APIListener<GithubRepositoryInformation>
+        listener: APIListener<GithubRepoInfoModel>
     ) {
-        val call: Call<GithubRepositoryInformation> =
+        val call: Call<GithubRepoInfoModel> =
             mRemote.loadInformationRepository(name, repository)
 
-        call.enqueue(object : Callback<GithubRepositoryInformation> {
+        call.enqueue(object : Callback<GithubRepoInfoModel> {
             override fun onResponse(
-                call: Call<GithubRepositoryInformation>,
-                response: Response<GithubRepositoryInformation>
+                call: Call<GithubRepoInfoModel>,
+                response: Response<GithubRepoInfoModel>
             ) {
                 val code = response.code()
                 if (code != GithubExplorerConstants.HTTP.SUCCESS) {
@@ -103,7 +102,7 @@ class GithubInfoRepository(val context: Context) {
                 }
             }
 
-            override fun onFailure(call: Call<GithubRepositoryInformation>, t: Throwable) {
+            override fun onFailure(call: Call<GithubRepoInfoModel>, t: Throwable) {
                 listener.onFailure("Um erro inesperado ocorreu , tente novamente mais tarde")
             }
 
